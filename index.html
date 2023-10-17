@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pisang Goroho</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="sec">
+        <header>
+            <a href="index.html"><img src="img/logo.png" class="logo" alt="Pisang Goroho Dsapa Goroho banana chips"></a>
+            <div class="toggleMenu" onclick="menuToggle();"></div>
+            <ul class="navigation">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#product">Product</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>GOROHO MANADO<br><span>Original</span></h2>
+                <p>Introducing our delicious Goroho banana chips in a variety of unique flavors. Experience the delight of perfectly fried Goroho bananas, combined with flavors that will tantalize your taste buds.</p>
+                <a href="#about">About Us</a>
+                <a href="#product">View All Product</a>
+            </div>
+            <div class="imgBox">
+                <img src="img/original.png" alt="Original Goroho banana chips" class="original">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="img/original.png" alt="Original Goroho banana chips" class="original" onclick="imgSlider('img/original.png');changeBgColor('#96ae52')"></li>
+            <li><img src="img/palm.png" alt="Palm Sugar Goroho banana chips" class="palmsugar" onclick="imgSlider('img/palm.png');changeBgColor('#d49e23')"></li>
+            <li><img src="img/garlic.png" alt="Garlic Goroho banana chips" class="garlic" onclick="imgSlider('img/garlic.png');changeBgColor('#c3c28c')"> </li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="img/facebook.png" alt="facebook"></a></li>
+            <li><a href="#"><img src="img/Instagram.png" alt="Instagram"></a></li>
+            <li><a href="#"><img src="img/linkedin.png" alt="linkedin"></a></li>
+        </ul>
+    </section>
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <div class="main">
+            <img src="img/logo.png" alt="DSAPA">
+            <div class="all-text">
+                <h4>About Us</h4>
+                <h2>Welcome To D'SAPA</h2>
+                <p>D'sapa is a small to medium-sized enterprise that supports traditional banana farmers and creates employment opportunities for local households, helping to boost their income. We are proud to introduce our delicious Goroho banana chips in a variety of unique flavors, including original, garlic, brown sugar, and more exciting flavors to come. Experience the delight of perfectly fried Goroho bananas, combined with flavors that will tantalize your taste buds.</p>
+                <div class="btn">
+                    <a href="#product">View All Product</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End About Section -->
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.original').src = anything;
+        }
+        function changeBgColor(color){
+            const sec = document.querySelector('.sec');
+            sec.style.background = color;
+        }
+        function menuToggle(){
+            const toggleMenu = document.querySelector('.toggleMenu');
+            const navigation = document.querySelector('.navigation');
+            toggleMenu.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
